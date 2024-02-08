@@ -23,6 +23,7 @@ namespace MyTestGame
         public MainWindow()
         {
             InitializeComponent();
+            MyFrame.NavigationService.Navigate(new Pages.AddUnit());
         }
     }
 }

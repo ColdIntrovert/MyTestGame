@@ -1,0 +1,94 @@
+﻿<Page x:Class="MyTestGame.Pages.AddUnit"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MyTestGame.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddUnit">
+
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <TextBlock HorizontalAlignment="Center" FontSize="30">Выбор своего персонажа</TextBlock>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                    <Image x:Name="WarriorImg" Width="200" Source="/PhotoGame/Warrior.jpg" MouseDown="WarriorImg_MouseDown"  ></Image>
+                    <TextBlock FontSize="20" HorizontalAlignment="Center">Warrior</TextBlock>
+                    <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock>Сила:</TextBlock>
+                            <TextBlock x:Name="WarStrengthTb"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock>Ловкость:</TextBlock>
+                            <TextBlock x:Name="WarDexterityTb"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock>Интелект:</TextBlock>
+                            <TextBlock x:Name="WarInteligenceTb"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock>Живучесть:</TextBlock>
+                            <TextBlock x:Name="WarVitalityTb"></TextBlock>
+                        </StackPanel>
+
+                    </StackPanel>
+
+                </StackPanel>
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                    <Image x:Name="RogueImg" Width="200" Source="/PhotoGame/Rogue.png" ></Image>
+                    <TextBlock FontSize="20" HorizontalAlignment="Center">Rogue</TextBlock>
+                    <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock>Сила:</TextBlock>
+                            <TextBlock x:Name="RogStrengthTb"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock>Ловкость:</TextBlock>
+                            <TextBlock x:Name="RogDexterityTb"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock>Интелект:</TextBlock>
+                            <TextBlock x:Name="RogInteligenceTb"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock>Живучесть:</TextBlock>
+                            <TextBlock x:Name="RogVitalityTb"></TextBlock>
+                        </StackPanel>
+
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                    <Image x:Name="WizardImg" Width="200" Source="/PhotoGame/Wizard.jpg" ></Image>
+                    <TextBlock FontSize="20" HorizontalAlignment="Center">Wizard</TextBlock>
+                    <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock>Сила:</TextBlock>
+                            <TextBlock x:Name="WizStrengthTb"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock>Ловкость:</TextBlock>
+                            <TextBlock x:Name="WizDexterityTb"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock>Интелект:</TextBlock>
+                            <TextBlock x:Name="WizInteligenceTb"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock>Живучесть:</TextBlock>
+                            <TextBlock x:Name="WizVitalityTb"></TextBlock>
+                        </StackPanel>
+
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel>
+
+
+                </StackPanel>
+
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
