@@ -23,23 +23,26 @@ namespace MyTestGame.Pages
     /// </summary>
     public partial class AddUnit : Page
     {
-        public static UnitType unitType;  
+        public static UnitType unitType;
+        public static UnitType unitWarrior;
+        public static UnitType unitRogue;
+        public static UnitType unitWizard;
         public AddUnit()
         {
             InitializeComponent();
-            UnitType unitWarrior = CRUD.GetUnit("Warrior");
+            unitWarrior = CRUD.GetUnit("Warrior");
             WarStrengthTb.Text = (unitWarrior.MinStrength).ToString() + "/" + (unitWarrior.MaxStrength).ToString();
             WarInteligenceTb.Text = (unitWarrior.MinInteligence).ToString() + "/" + (unitWarrior.MaxInteligence).ToString();
             WarDexterityTb.Text = (unitWarrior.MinDexterity).ToString() + "/" + (unitWarrior.MaxDexterity).ToString();
             WarVitalityTb.Text = (unitWarrior.MinVitality).ToString() + "/" + (unitWarrior.MaxVitality).ToString();
 
-            UnitType unitRogue = CRUD.GetUnit("Rogue");
+            unitRogue = CRUD.GetUnit("Rogue");
             RogStrengthTb.Text = (unitRogue.MinStrength).ToString() + "/" + (unitRogue.MaxStrength).ToString();
             RogInteligenceTb.Text = (unitRogue.MinInteligence).ToString() + "/" + (unitRogue.MaxInteligence).ToString();
             RogDexterityTb.Text = (unitRogue.MinDexterity).ToString() + "/" + (unitRogue.MaxDexterity).ToString();
             RogVitalityTb.Text = (unitRogue.MinVitality).ToString() + "/" + (unitRogue.MaxVitality).ToString();
 
-            UnitType unitWizard = CRUD.GetUnit("Warrior");
+            unitWizard = CRUD.GetUnit("Warrior");
             WizStrengthTb.Text = (unitWizard.MinStrength).ToString() + "/" + (unitWizard.MaxStrength).ToString();
             WizInteligenceTb.Text = (unitWizard.MinInteligence).ToString() + "/" + (unitWizard.MaxInteligence).ToString();
             WizDexterityTb.Text = (unitWizard.MinDexterity).ToString() + "/" + (unitWizard.MaxDexterity).ToString();
@@ -48,7 +51,36 @@ namespace MyTestGame.Pages
 
         private void WarriorImg_MouseDown(object sender, MouseButtonEventArgs e)
         {
-           
+            if(NickNameTb.Text == "")
+            {
+                MessageBox.Show("Напишите имя пользователя:");
+
+            }
+            else
+            {
+                //unitWarrior.Name = NickNameTb.Text;
+                //CRUD.CreateUser(unitWarrior);
+                App.users = unitWarrior;
+                NavigationService.Navigate(new CreateUnit("Warrior"));
+
+            }
+        }
+
+        private void RogueImg_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (NickNameTb.Text == "")
+            {
+                MessageBox.Show("Напишите имя пользователя:");
+
+            }
+            else
+            {
+                unitRogue.Name = NickNameTb.Text;
+                CRUD.CreateUser(unitWarrior);
+                App.users = unitRogue;
+                NavigationService.Navigate(new CreateUnit("Rogue"));
+
+            }
         }
     }
 }

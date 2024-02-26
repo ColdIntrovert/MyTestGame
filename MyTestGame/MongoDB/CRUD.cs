@@ -46,6 +46,14 @@ namespace MyTestGame.MongoDB
             };
             return unitList;
         }
+        public static void EditSkillUnit(UnitType unitType)
+        {
+            var client = new MongoClient("mongodb://localhost");
+            var database = client.GetDatabase("Game");
+            var collection = database.GetCollection<UnitType>("CharacterCollection");
+            var filter = Builders<UnitType>.Filter.Eq(x => x._id, unitType._id);
+            collection.ReplaceOne(filter, unitType);
+        }
     }   
 
             

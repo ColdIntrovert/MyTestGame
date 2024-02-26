@@ -9,8 +9,78 @@
       Title="CreateUnit">
 
     <Grid>
-        <StackPanel>
-            
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+
+                <StackPanel VerticalAlignment="Center" Orientation="Vertical" HorizontalAlignment="Center">
+                    <TextBlock x:Name="NameTb" Margin="0 0 0 10" FontSize="20" HorizontalAlignment="Center">Warrior</TextBlock>
+                    <StackPanel Orientation="Vertical" >
+                        <StackPanel Orientation="Horizontal" Margin="0 0 20 0">
+                            <TextBlock Margin="0 0 5 0">Сила:</TextBlock>
+                            <StackPanel Orientation="Horizontal" Margin="0 0 10 0">
+                                <TextBlock  x:Name="MinStrengthTb"></TextBlock>
+                                <TextBlock>/</TextBlock>
+                                <TextBlock x:Name="MaxStrengthTb"></TextBlock>
+                            </StackPanel>
+                            <Button Width="20" x:Name="PlusStrBtn" Margin="0 0 10 0" Click="PlusStrBtn_Click">+</Button>
+                            <Button Width="20" x:Name="MinusStrBtn" Click="MinusStrBtn_Click">-</Button>
+                            
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0 0 20 0">
+                            <TextBlock Margin="0 0 5 0">Ловкость:</TextBlock>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock  x:Name="MinDexterityTb"></TextBlock>
+                                <TextBlock>/</TextBlock>
+                                <TextBlock Margin="0 0 10 0" x:Name="MaxDexterityTb"></TextBlock>
+                            </StackPanel>
+                            <Button Width="20" x:Name="PlusDexBtn" Margin="0 0 10 0" Click="PlusDexBtn_Click">+</Button>
+                            <Button Width="20" x:Name="MinusDexBtn" Click="MinusDexBtn_Click">-</Button>
+
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0 0 20 0">
+                            <TextBlock Margin="0 0 5 0">Интелект:</TextBlock>
+                            <StackPanel Orientation="Horizontal">
+                              <TextBlock x:Name="MinInteligenceTb"></TextBlock>
+                                <TextBlock>/</TextBlock>
+                                <TextBlock Margin="0 0 10 0" x:Name="MaxInteligenceTb"></TextBlock>
+                            </StackPanel>
+                            <Button Width="20" x:Name="PlusIntBtn" Margin="0 0 10 0" Click="PlusIntBtn_Click">+</Button>
+                            <Button Width="20" x:Name="MinusIntBtn" Click="MinusIntBtn_Click">-</Button>
+
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" >
+                            <TextBlock Margin="0 0 5 0">Живучесть:</TextBlock>
+                            <StackPanel Orientation="Horizontal">
+                               <TextBlock x:Name="MinVitalityTb"></TextBlock>
+                                <TextBlock>/</TextBlock>
+                                <TextBlock  Margin="0 0 10 0" x:Name="MaxVitalityTb"></TextBlock>
+                            </StackPanel>
+                            <Button Width="20" x:Name="PlusVitBtn" Margin="0 0 10 0" Click="PlusVitBtn_Click">+</Button>
+                            <Button Width="20" x:Name="MinusVitBtn" Click="MinusVitBtn_Click">-</Button>
+
+                        </StackPanel>
+                        <Button x:Name="EditUnitUsers" Margin="0 10 0 0" Click="EditUnitUsers_Click">Сохраниить изменения</Button>
+                        <StackPanel Orientation="Vertical">
+                            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                                <StackPanel Orientation="Horizontal">
+                                    <StackPanel Margin="0 0 15 0" Orientation="Vertical">
+                                        <TextBlock >Опыт</TextBlock>
+                                        <TextBlock x:Name="PointTb" HorizontalAlignment="Center">0</TextBlock>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Vertical">
+                                        <TextBlock >Уровень</TextBlock>
+                                        <TextBlock x:Name="LvlTb" HorizontalAlignment="Center">0</TextBlock>
+                                    </StackPanel>
+                                </StackPanel>
+                            </StackPanel>
+                            <Button x:Name="PludLvlBtn" Click="PludLvlBtn_Click">Увеличить уровень</Button>
+
+                        </StackPanel>
+                    </StackPanel>
+                    
+                </StackPanel>
+
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Page>
